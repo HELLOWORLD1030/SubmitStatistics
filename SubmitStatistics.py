@@ -17,7 +17,7 @@ class CollectionHomeWork:
     # 打开xlsx文件，并返回包含学生学号和姓名的列表
     def OpenXLSX(self): 
         wb=openpyxl.load_workbook(self.__CurrentPath+os.sep+self.__XLSXFileName)
-        sheet=wb["Sheet1"]
+        sheet=wb.worksheets[0]
         names=sheet["B"]
         xuehao=sheet["A"]
         InfoList=[]
